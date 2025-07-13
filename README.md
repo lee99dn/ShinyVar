@@ -16,9 +16,6 @@
 
 - 🧾 Upload and compare up to **4 VCF files**.
 - 🔬 Visualize mutations using **interactive Venn diagrams**.
-- 🧬 Highlight **non-synonymous variants** and their gene locations.
-- 🧱 Upload **SWISS-MODEL PDB files** to explore structural impacts.
-- 💥 Upload and compare **docking results** from HADDOCK or AutoDock Vina.
 - 📥 Download variant tables and mutation summaries.
 
 ---
