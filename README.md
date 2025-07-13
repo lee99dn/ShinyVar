@@ -8,7 +8,7 @@
 
 ## 🌟 What is ShinyVar?
 
-**ShinyVar** is a web application developed in **R Shiny** to analyze and visualize genetic variants in **influenza viruses** across subtypes or years. It helps researchers identify shared and unique mutations, perform structure-based analysis, and explore molecular docking results — all through a simple browser interface.
+**ShinyVar** is a web application developed in **R Shiny** to analyze and visualize genetic variants in **influenza viruses** across subtypes or years. It helps researchers identify shared and unique mutations - all through a simple browser interface.
 
 ---
 
