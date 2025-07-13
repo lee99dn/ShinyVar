@@ -33,7 +33,7 @@
 3. Explore your data:
    - View mutation overlaps
    - Compare variants
-   - 
+
 4. Further step (optional)
    - Visualize protein structures
    - Analyze docking scores and interaction changes
