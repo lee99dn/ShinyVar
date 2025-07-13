@@ -27,8 +27,6 @@
 
 2. Upload your data:  
    - Up to 4 VCF files from different influenza subtypes or years  
-   - Optional: PDB structure files modeled from SWISS-MODEL  
-   - Optional: Docking result files from HADDOCK or AutoDock Vina
 
 3. Explore your data:
    - View mutation overlaps
