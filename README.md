@@ -26,7 +26,7 @@
    👉 **[https://snperapp.shinyapps.io/ShinyVar/](https://snperapp.shinyapps.io/ShinyVar/)**
 
 2. Upload your data:  
-   - Up to 4 VCF files from different influenza subtypes or years  
+   - Up to 4 VCF files
 
 3. Explore your data:
    - View mutation overlaps
