@@ -228,7 +228,12 @@ ui <- tagList(
                           tags$li(
                             "Example_summary: ",
                             downloadLink(outputId = "Example_summary", label = "link")
-                          )
+                          ),
+                          h5("Example of output in All.csv of Example_summary"),
+                          p(HTML("CHROM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POS REF ALT ID_1  QUAL_1 FILTER_1")),
+                          p(HTML("CY115153.1 477 AGG A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1594&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PASS")),
+                          strong("position 477, AGG A indicates a deletion of GG after A in the sample genome."), br(),
+                          strong("suffix _1 is corresponding to 1st VCF file parameter."), br()
                       )
                       
              ),
@@ -239,7 +244,7 @@ ui <- tagList(
                           h5("Citation"),
                           
                           "The description of citation below", br(),
-                          "In processing", br(),
+                          "In processing", br()
                           )
              ),
                           
