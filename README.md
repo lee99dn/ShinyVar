@@ -2,7 +2,6 @@
 
 **🔗 Live App:** [https://snperapp.shinyapps.io/ShinyVar/](https://snperapp.shinyapps.io/ShinyVar/)  
 **Author:** Danusorn Lee  
-
 ---
 
 ## 🌟 What is ShinyVar?
