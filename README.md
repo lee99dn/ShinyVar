@@ -39,3 +39,8 @@
 ## 📁 Example Input Files
 
 You can try the app using provided examples in the web app.
+
+# License
+
+ShinyVar was be released under GPL license and be widely available on GitHub: https://github.com/lee99dn/ShinyVar.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11197886.svg)](https://doi.org/10.5281/zenodo.11197886)
