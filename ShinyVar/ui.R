@@ -209,13 +209,13 @@ ui <- tagList(
                           br(),
                           strong("*At least 2 files are required for the analysis."),
                           br(),
-                          strong("*Output file names will be renamed using ordered numbers. "), "For example: the 1st VCF file will be saved as VCF1.csv.",
+                          strong("*Output file names will be renamed using ordered numbers. "), "For example: the 1st VCF file will be saved as VCF1.tsv.",
                           br(),
-                          strong("*Only_VCF1.csv contains only variants from the first VCF file, VCF1_vs_VCF2.csv contains the intersecting variants between the first and second VCF files."),
+                          strong("*Only_VCF1.tsv contains only variants from the first VCF file, VCF1_vs_VCF2.tsv contains the intersecting variants between the first and second VCF files."),
                           br(),
-                          strong("*Only_VCF1_VCF2_VCF3.csv contains the intersecting variants among the first, second, and third VCF files."),
+                          strong("*Only_VCF1_VCF2_VCF3.tsv contains the intersecting variants among the first, second, and third VCF files."),
                           br(),
-                          strong("*Only_VCF1_VCF2_VCF3_VCF4.csv contains the intersecting variants from all four VCF files."),
+                          strong("*Only_VCF1_VCF2_VCF3_VCF4.tsv contains the intersecting variants from all four VCF files."),
                           br(),
                 
                           br(),
@@ -229,11 +229,13 @@ ui <- tagList(
                             "Example_summary: ",
                             downloadLink(outputId = "Example_summary", label = "link")
                           ),
-                          h5("Example of output in All.csv of Example_summary"),
+                          h5("Example of output in All.tsv of Example_summary"),
                           p(HTML("CHROM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POS REF ALT ID_1  QUAL_1 FILTER_1")),
                           p(HTML("CY115153.1 477 AGG A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1594&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PASS")),
                           strong("position 477, AGG A indicates a deletion of GG after A in the sample genome."), br(),
-                          strong("suffix _1 is corresponding to 1st VCF file parameter."), br()
+                          strong("suffix _1 is corresponding to 1st VCF file parameter."), br(),
+                          strong("*Before using with snpEff*"), br(),
+                          strong("*An ID column must be inserted between the POS and REF columns, and the INFO, FILTER, QUAL, FORMAT, and sample name columns must be removed to produce a standard 10-column VCF file.*"), br(),
                       )
                       
              ),
@@ -244,7 +246,8 @@ ui <- tagList(
                           h5("Citation"),
                           
                           "The description of citation below", br(),
-                          "In processing", br()
+                          "Lee D, Sangket U. 2026. ShinyVar: a web-based application for comparative Influenza variant analysis supporting structure-guided approaches to vaccine and antiviral drug design. PeerJ 14:e21158", br(),
+                          "https://doi.org/10.7717/peerj.21158", br(),
                           )
              ),
                           
