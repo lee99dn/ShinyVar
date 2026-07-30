@@ -419,6 +419,8 @@ server <- function(input, output){
                                           sort_merge <- dplyr::full_join(sort_merge, df_var, by=keys)
                                         }
                                       }
+                                      #Rename CHROM column to #CHROM
+                                      colnames(sort_merge)[1] <- "#CHROM"
                                       #find intersec variant
                                       intersec <- list()
                                       result_all <- list()
@@ -599,9 +601,9 @@ server <- function(input, output){
   
   ## Consensus result ----
   output$Result_file_intersec <- downloadHandler(
-    filename = "consensus_result.csv", 
+    filename = "consensus_result.tsv", 
     content = function(file){
-      write.csv(Result_ShinyVar()$consensus,file=file,row.names = FALSE)
+      write.table(Result_ShinyVar()$consensus,file=file,row.names = FALSE, sep= "\t")
     }
   )
   
@@ -612,15 +614,15 @@ server <- function(input, output){
         tmpdir <- tempdir()
         for (i in 1:length(Result_ShinyVar()$file)) {
           table <- Result_ShinyVar()$file[[i]]
-          file_name <- paste0(df_name[[i]], ".csv")
+          file_name <- paste0(df_name[[i]], ".tsv")
           file_path <-  file.path(tmpdir, file_name)
-          write.csv(table,file=file_path,row.names = FALSE)
+          write.table(table,file=file_path,row.names = FALSE, sep = "\t")
         }
         All <- names(Result_ShinyVar())
-        All <- paste0(All[4], ".csv")
+        All <- paste0(All[4], ".tsv")
         All <- file.path(tmpdir, All)
-        write.csv(Result_ShinyVar()$All,file=All, row.names= FALSE)
-        fs <- list.files(path = tmpdir, pattern = ".csv$", full.names=TRUE)
+        write.table(Result_ShinyVar()$All,file=All, row.names= FALSE, sep= "\t")
+        fs <- list.files(path = tmpdir, pattern = ".tsv$", full.names=TRUE)
         zip::zipr(zipfile=file, files=fs)
         unlink(x=fs)
       },
